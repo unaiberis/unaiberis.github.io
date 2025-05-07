@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="1000" height="500">
+  <!-- Fondo azul -->
+  <rect width="60" height="30" fill="#012169"/>
+
+  <!-- Aspas blancas -->
+  <path d="M0,0 L60,30 M60,0 L0,30" stroke="white" stroke-width="6"/>
+
+  <!-- Aspas rojas centradas sobre las blancas -->
+  <path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="2"/>
+
+  <!-- Cruz blanca -->
+  <rect x="26" y="0" width="8" height="30" fill="white"/>
+  <rect x="0" y="11" width="60" height="8" fill="white"/>
+
+  <!-- Cruz roja sobre la blanca -->
+  <rect x="28" y="0" width="4" height="30" fill="#C8102E"/>
+  <rect x="0" y="13" width="60" height="4" fill="#C8102E"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="1000" height="500">
+  <!-- Franja roja superior -->
+  <rect x="0" y="0" width="60" height="7" fill="#AA151B"/>
+
+  <!-- Franja amarilla central -->
+  <rect x="0" y="7" width="60" height="14" fill="#F1BF00"/>
+
+  <!-- Franja roja inferior -->
+  <rect x="0" y="23" width="60" height="7" fill="#AA151B"/>
+</svg>
