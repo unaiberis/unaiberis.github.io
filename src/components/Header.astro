@@ -1,0 +1,25 @@
+---
+const { lang, navLinks } = Astro.props;
+---
+
+<header class="bg-blue-700 text-white sticky top-0 shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Unai Beristain</h1>
+    <nav class="flex items-center space-x-4">
+      {navLinks.map(link => (
+        <a href={link.href} class="px-3 py-2 hover:bg-blue-800 rounded">{link.text}</a>
+      ))}
+      <div class="flex items-center space-x-2">
+        <a href="/" aria-label="Switch to Basque" class="inline-flex rounded-full p-1 hover:bg-blue-800 {lang === 'eu' ? 'ring-2 ring-blue-300' : ''}">
+          <img src="/flags/bandera-eu.svg" alt="Basque flag" class="w-8 h-8" />
+        </a>
+        <a href="/es" aria-label="Switch to Spanish" class="inline-flex rounded-full p-1 hover:bg-blue-800 {lang === 'es' ? 'ring-2 ring-blue-300' : ''}">
+          <img src="/flags/bandera-es.svg" alt="Spanish flag" class="w-8 h-8" />
+        </a>
+        <a href="/en" aria-label="Switch to English" class="inline-flex rounded-full p-1 hover:bg-blue-800 {lang === 'en' ? 'ring-2 ring-blue-300' : ''}">
+          <img src="/flags/bandera-en.svg" alt="English flag" class="w-8 h-8" />
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>

@@ -1,5 +1,18 @@
 ---
 import '../../styles/global.css';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const navLinks = [
+  { href: "#about", text: "Sobre Mí" },
+  { href: "#experience", text: "Experiencia" },
+  { href: "#projects", text: "Proyectos" },
+  { href: "#skills", text: "Habilidades" },
+  { href: "#education", text: "Educación" },
+  { href: "#contact", text: "Contacto" },
+];
+const footerTitle = "Contacto";
+const footerText = "¿Interesado en colaborar? ¡Conectemos!";
 ---
 
 <html lang="es">
@@ -9,32 +22,7 @@ import '../../styles/global.css';
     <title>Unai Beristain - Portafolio</title>
   </head>
   <body class="bg-gray-50 font-sans">
-    <!-- Header -->
-    <header class="bg-blue-700 text-white sticky top-0 shadow-lg">
-      <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold">Unai Beristain</h1>
-        <nav class="flex items-center space-x-4">
-          <a href="#about" class="px-3 py-2 hover:bg-blue-800 rounded">Sobre Mí</a>
-          <a href="#experience" class="px-3 py-2 hover:bg-blue-800 rounded">Experiencia</a>
-          <a href="#projects" class="px-3 py-2 hover:bg-blue-800 rounded">Proyectos</a>
-          <a href="#skills" class="px-3 py-2 hover:bg-blue-800 rounded">Habilidades</a>
-          <a href="#education" class="px-3 py-2 hover:bg-blue-800 rounded">Educación</a>
-          <a href="#contact" class="px-3 py-2 hover:bg-blue-800 rounded">Contacto</a>
-          <div class="flex items-center space-x-2">
-            <a href="/" aria-label="Switch to Basque" class="inline-flex rounded-full p-1 hover:bg-blue-800">
-              <img src="/flags/bandera-eu.svg" alt="Basque flag" class="w-8 h-8" />
-            </a>
-            <a href="/es" aria-label="Switch to Spanish" class="inline-flex rounded-full p-1 hover:bg-blue-800 ring-2 ring-blue-300">
-              <img src="/flags/bandera-es.svg" alt="Spanish flag" class="w-8 h-8" />
-            </a>
-            <a href="/en" aria-label="Switch to English" class="inline-flex rounded-full p-1 hover:bg-blue-800">
-              <img src="/flags/bandera-en.svg" alt="English flag" class="w-8 h-8" />
-            </a>
-          </div>
-        </nav>
-      </div>
-    </header>
-
+    <Header lang="es" navLinks={navLinks} />
     <!-- About Section -->
     <section id="about" class="bg-gradient-to-r from-blue-50 to-blue-100 py-20">
       <div class="max-w-7xl mx-auto px-4">
@@ -95,7 +83,6 @@ import '../../styles/global.css';
         </div>
       </div>
     </section>
-
     <!-- Experience Section -->
     <section id="experience" class="bg-gray-100 py-16">
       <div class="max-w-7xl mx-auto px-4">
@@ -128,10 +115,7 @@ import '../../styles/global.css';
               <li>
                 Actúo con <a href="https://sahatsa.com/" class="text-blue-600 hover:underline">Sahatsa Dantza Taldea</a> (<a href="https://www.youtube.com/@sahatsa" class="text-blue-600 hover:underline">YouTube</a>, <a href="https://www.instagram.com/sahatsadt/" class="text-blue-600 hover:underline">Instagram</a>).
               </li>
-              <li>Contribuyo a preservar el patrimonio musical vasco.</li>
-              <li>
-                Sigue a Txalkor en <a href="https://www.instagram.com/txalkortxistu/" class="text-blue-600 hover:underline">Instagram</a>.
-              </li>
+              <li>Sigue a Txalkor en <a href="https://www.instagram.com/txalkortxistu/" class="text-blue-600 hover:underline">Instagram</a>.</li>
             </ul>
           </div>
           <div class="bg-white p-6 rounded-lg shadow-md">
@@ -148,7 +132,6 @@ import '../../styles/global.css';
         </div>
       </div>
     </section>
-
     <!-- Projects Section -->
     <section id="projects" class="max-w-7xl mx-auto px-4 py-16">
       <h2 class="text-4xl font-bold text-gray-900 text-center mb-10">Proyectos</h2>
@@ -169,7 +152,6 @@ import '../../styles/global.css';
         </div>
       </div>
     </section>
-
     <!-- Skills Section -->
     <section id="skills" class="bg-gray-100 py-16">
       <div class="max-w-7xl mx-auto px-4">
@@ -190,7 +172,6 @@ import '../../styles/global.css';
         </div>
       </div>
     </section>
-
     <!-- Education Section -->
     <section id="education" class="max-w-7xl mx-auto px-4 py-16">
       <h2 class="text-4xl font-bold text-gray-900 text-center mb-10">Educación</h2>
@@ -216,17 +197,6 @@ import '../../styles/global.css';
         </div>
       </div>
     </section>
-
-    <!-- Contact Footer -->
-    <footer id="contact" class="bg-blue-900 text-white py-12">
-      <div class="max-w-7xl mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-6">Contacto</h2>
-        <p class="text-lg mb-4">¿Interesado en colaborar? ¡Conectemos!</p>
-        <div class="flex justify-center space-x-4">
-          <a href="https://github.com/unaiberis" class="text-white hover:text-gray-300">GitHub</a>
-          <a href="https://www.linkedin.com/in/unaiberis/" class="text-white hover:text-gray-300">LinkedIn</a>
-        </div>
-      </div>
-    </footer>
+    <Footer footerTitle={footerTitle} footerText={footerText} />
   </body>
 </html>
